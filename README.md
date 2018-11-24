@@ -1,0 +1,1 @@
+# swissquote_challenge
