@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7978e09-cae7-42d6-8a5f-10af4daa875c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swiss_quote_avg.py" beforeDir="false" afterPath="$PROJECT_DIR$/swiss_quote_avg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="swiss_quote_avg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swiss_quote_avg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="86">
+              <caret line="55" column="77" lean-forward="true" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -91,7 +90,7 @@
       <find>normalise_windows</find>
       <find>10</find>
       <find>predict</find>
-      <find />
+      <find>def predict</find>
       <find>model</find>
       <find>4.0</find>
       <find>4.02</find>
@@ -101,6 +100,7 @@
       <find>reshape</find>
       <find>avg_x</find>
       <find>h2</find>
+      <find>25</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -333,13 +333,13 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18594436" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6486091" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.329429" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8039568" visible="true" weight="0.17142858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.675" visible="true" weight="0.17142858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.07" />
-      <window_info id="Structure" order="1" sideWeight="0.19604316" side_tool="true" visible="true" weight="0.17142858" />
+      <window_info id="Structure" order="1" sideWeight="0.325" side_tool="true" visible="true" weight="0.17142858" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -490,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swiss_quote_avg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="86">
+          <caret line="55" column="77" lean-forward="true" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
