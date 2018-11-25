@@ -25,9 +25,9 @@ def readHistoricalData():
 def toUnixTimeStamp(originalDateTime):
     return int(datetime.strptime(originalDateTime, '%Y-%m-%dT%H:%M:%S.%fZ').timestamp())
 
-def log(event):
+def log(event,value):
     d = datetime.now()
-    print('['+str(d)+']['+event+']')
+    print('['+str(d)+']['+event+']['+str(value)+']')
 
 
 def runPriceListening():
@@ -37,45 +37,49 @@ def runPriceListening():
    prev_avg = []
    for line in r.iter_lines():
        if line:
-           actualTime = toUnixTimeStamp(str(line)[2:-1].split(' ')[0])
+           #actualTime = toUnixTimeStamp(str(line)[2:-1].split(' ')[0])
            actualPrice = float(str(line)[2:-1].split(' ')[1])
            sliding_window.append(actualPrice)
            if len(sliding_window) < 10:
                continue
            elif len(sliding_window) == 10:
                avg = sum(sliding_window) / 10.0
-               log(str(avg))
+               log('avg',str(avg))
                cntr+=1
                if cntr == 5:
                    prev_avg.append(avg)
                    cntr=0
                if (len(prev_avg)==4):
                    #descendent
+                   slope = abs(prev_avg[2] - prev_avg[0])/25
+                   print(slope)
                    if(prev_avg[0]<prev_avg[1]) and (prev_avg[1]<prev_avg[2]):
                        #sell
-                       sell(actualPrice, cap, 0.03)
-                       log('sell')
+                       sell(actualPrice, cap, slope)
+                       log('sell',((cap * slope) / actualPrice))
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       buy(actualPrice, cap, 0.03)
-                       log('buy')
+                       buy(actualPrice, cap, slope)
+                       log('buy',((cap * slope) / actualPrice))
                    else:
                        #hold
-                       log('hold')
+                       log('hold',((cap * slope) / actualPrice))
                    prev_avg.remove(prev_avg[0])
                elif (len(prev_avg)==3):
+                   slope = abs(prev_avg[2] - prev_avg[0])/25
+                   print(slope)
                    if (prev_avg[0] < prev_avg[1]) and (prev_avg[1] < prev_avg[2]):
                        #sell
-                       sell(actualPrice, cap, 0.03)
-                       log('sell')
+                       sell(actualPrice, cap, slope)
+                       log('sell',((cap * slope) / actualPrice))
 
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       buy(actualPrice, cap, 0.03)
-                       log('buy')
+                       buy(actualPrice, cap, slope)
+                       log('buy',((cap * slope) / actualPrice))
                    else:
                        # hold
-                       log('hold')
+                       log('hold',((cap * slope) / actualPrice))
 
                sliding_window.remove(sliding_window[0])
 
