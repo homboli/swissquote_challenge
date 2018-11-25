@@ -14,7 +14,7 @@ def buy(actualPrice, money, part):
    return r
 
 def sell(actualPrice, money, part):
-   amount = (money * part) / actualPrice
+   amount = ((100000 - money) * part) / actualPrice
    data = "SELL " + str(amount) + " BTC " + APIKEY
    r = requests.post(HOST, data)
    return r
