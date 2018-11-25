@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7978e09-cae7-42d6-8a5f-10af4daa875c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swiss_quote_avg.py" beforeDir="false" afterPath="$PROJECT_DIR$/swiss_quote_avg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +15,7 @@
     <SUITE FILE_PATH="coverage/swissquote_challenge$probe.coverage" NAME="probe Coverage Results" MODIFIED="1543135608646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/swissquote_challenge$main.coverage" NAME="main Coverage Results" MODIFIED="1543102867130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/swissquote_challenge$run.coverage" NAME="run Coverage Results" MODIFIED="1543136425399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/swissquote_challenge$swiss_quote.coverage" NAME="swiss_quote Coverage Results" MODIFIED="1543138320840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/swissquote_challenge$swiss_quote.coverage" NAME="swiss_quote Coverage Results" MODIFIED="1543139590914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/swissquote_challenge$kalman.coverage" NAME="kalman Coverage Results" MODIFIED="1543091702698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -58,8 +57,8 @@
       <file leaf-file-name="swiss_quote_avg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swiss_quote_avg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state relative-caret-position="113">
+              <caret line="50" selection-start-line="50" selection-end-line="51" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -334,13 +333,13 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.52122986" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5080527" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.329429" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7614679" visible="true" weight="0.17142858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.76785713" visible="true" weight="0.17142858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.07" />
-      <window_info id="Structure" order="1" sideWeight="0.23853211" side_tool="true" visible="true" weight="0.17142858" />
+      <window_info id="Structure" order="1" sideWeight="0.23214285" side_tool="true" visible="true" weight="0.17142858" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -491,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swiss_quote_avg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        <state relative-caret-position="113">
+          <caret line="50" selection-start-line="50" selection-end-line="51" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

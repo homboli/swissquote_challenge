@@ -3,6 +3,8 @@ from datetime import datetime
 
 HOST =  "http://lauzhack.sqpub.ch"
 APIKEY = "hf3768dkLLhf"
+TRANS_DELTA=4
+SLOPE_DIVIDE=21
 
 cap = 100000
 
@@ -19,8 +21,6 @@ def sell(actualPrice, money, part):
    r = requests.post(HOST, data)
    return r
 
-def readHistoricalData():
-    print("")
 
 def toUnixTimeStamp(originalDateTime):
     return int(datetime.strptime(originalDateTime, '%Y-%m-%dT%H:%M:%S.%fZ').timestamp())
@@ -35,9 +35,10 @@ def runPriceListening():
    sliding_window = []
    cntr=0
    prev_avg = []
+   prev_time=0
    for line in r.iter_lines():
        if line:
-           #actualTime = toUnixTimeStamp(str(line)[2:-1].split(' ')[0])
+           actualTime = toUnixTimeStamp(str(line)[2:-1].split(' ')[0])
            actualPrice = float(str(line)[2:-1].split(' ')[1])
            sliding_window.append(actualPrice)
            if len(sliding_window) < 10:
@@ -51,35 +52,39 @@ def runPriceListening():
                    cntr=0
                if (len(prev_avg)==4):
                    #descendent
-                   slope = abs(prev_avg[2] - prev_avg[0])/15
-                   print(slope)
+                   slope = abs(prev_avg[2] - prev_avg[0])/SLOPE_DIVIDE
+                   log('SLOPE',slope)
                    if(prev_avg[0]<prev_avg[1]) and (prev_avg[1]<prev_avg[2]):
                        #sell
-                       if (slope > 0.25):
+                       if (slope > 0.25 and (actualTime-prev_time)>TRANS_DELTA):
                             sell(actualPrice, cap, slope)
+                            prev_time=actualTime
                             log('sell',((cap * slope) / actualPrice))
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       if (slope > 0.25):
+                       if (slope > 0.25 and (actualTime-prev_time)>TRANS_DELTA):
                             buy(actualPrice, cap, slope)
+                            prev_time=actualTime
                             log('buy',((cap * slope) / actualPrice))
                    else:
                        #hold
                        log('hold',((cap * slope) / actualPrice))
                    prev_avg.remove(prev_avg[0])
                elif (len(prev_avg)==3):
-                   slope = abs(prev_avg[2] - prev_avg[0])/15
-                   print(slope)
+                   slope = abs(prev_avg[2] - prev_avg[0])/SLOPE_DIVIDE
+                   log('SLOPE',slope)
                    if (prev_avg[0] < prev_avg[1]) and (prev_avg[1] < prev_avg[2]):
                        #sell
-                       if(slope>0.25):
+                       if(slope>0.25 and (actualTime-prev_time)>TRANS_DELTA):
                             sell(actualPrice, cap, slope)
+                            prev_time=actualTime
                             log('sell',((cap * slope) / actualPrice))
 
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       if (slope > 0.25):
+                       if (slope > 0.25 and (actualTime-prev_time)>TRANS_DELTA):
                             buy(actualPrice, cap, slope)
+                            prev_time=actualTime
                             log('buy',((cap * slope) / actualPrice))
                    else:
                        # hold
