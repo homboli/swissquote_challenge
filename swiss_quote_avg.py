@@ -51,16 +51,16 @@ def runPriceListening():
                    cntr=0
                if (len(prev_avg)==4):
                    #descendent
-                   slope = abs(prev_avg[2] - prev_avg[0])/10
+                   slope = abs(prev_avg[2] - prev_avg[0])/15
                    print(slope)
                    if(prev_avg[0]<prev_avg[1]) and (prev_avg[1]<prev_avg[2]):
                        #sell
-                       if (slope > 0.1):
+                       if (slope > 0.25):
                             sell(actualPrice, cap, slope)
                             log('sell',((cap * slope) / actualPrice))
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       if (slope > 0.1):
+                       if (slope > 0.25):
                             buy(actualPrice, cap, slope)
                             log('buy',((cap * slope) / actualPrice))
                    else:
@@ -68,17 +68,17 @@ def runPriceListening():
                        log('hold',((cap * slope) / actualPrice))
                    prev_avg.remove(prev_avg[0])
                elif (len(prev_avg)==3):
-                   slope = abs(prev_avg[2] - prev_avg[0])/10
+                   slope = abs(prev_avg[2] - prev_avg[0])/15
                    print(slope)
                    if (prev_avg[0] < prev_avg[1]) and (prev_avg[1] < prev_avg[2]):
                        #sell
-                       if(slope>0.1):
+                       if(slope>0.25):
                             sell(actualPrice, cap, slope)
                             log('sell',((cap * slope) / actualPrice))
 
                    elif (prev_avg[0] > prev_avg[1]) and (prev_avg[1] > prev_avg[2]):
                        # buy
-                       if (slope > 0.1):
+                       if (slope > 0.25):
                             buy(actualPrice, cap, slope)
                             log('buy',((cap * slope) / actualPrice))
                    else:
